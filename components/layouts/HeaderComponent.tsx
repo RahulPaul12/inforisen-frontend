@@ -15,7 +15,7 @@ const HeaderComponent = () => {
             <Link href="/">
                 <Image src="/assets/images/inforisen.png" alt="logo" width={100} height={20} />
             </Link>
-            <ul className="text-base font-normal hidden lg:flex gap-1 items-center">
+            <ul className="text-base font-medium font-inter hidden lg:flex gap-1 items-center">
                 <li><Link className="py-2 px-3 rounded-lg" href="/pricing">Home</Link></li>
                 <li><Link className="py-2 px-3 rounded-lg" href="/partner-program">Services</Link></li>
                 <li><Link className="py-2 px-3 rounded-lg" href="/partner-program">Blog</Link></li>
@@ -23,19 +23,20 @@ const HeaderComponent = () => {
                 <li><Link className="py-2 px-3 rounded-lg" href="/partner-program">Contact Us</Link></li>
                 <li><Link className="py-2 px-3 rounded-lg" href="/partner-program">Api</Link></li>
             </ul>
-
-            <div className="flex items-center gap-2">
-                <Link href="/login" className="landing-primary-button h-10 lg:h-11 px-4! hidden! lg:flex! items-center">
-                    <i className="lab-fill-profile-circle text-lg"></i>
+            <div className="hidden lg:flex items-center gap-2">
+                <button className="outline-btn">
                     <span className="capitalize">Login</span>
-                </Link>
-                <div className="py-2 px-1 border border-primary rounded max-lg:block hidden">
+                </button>
+                <button className="gradient-btn">
+                    <span className="capitalize">Signup</span>
+                </button>
+            </div>
+            <div className="max-lg:block hidden">
                     <button onClick={()=>openCanvas("menu-sidebar")} className="flex flex-col gap-1">
                         <span className="w-8 h-1 bg-primary"></span>
                         <span className="w-8 h-1 bg-primary"></span>
                         <span className="w-8 h-1 bg-primary"></span>
                     </button>
-                </div>
             </div>
         </nav>
         </header>

@@ -50,8 +50,8 @@
     .db-tabDiv.active { @apply block }
 
     .gradient-text {@apply bg-linear-to-r from-primary to-secondary text-transparent bg-clip-text}
-    .outline-btn {@apply border border-primary px-[28.8px] py-3 rounded-xl font-inter font-medium text-base text-primary}
-    .gradient-btn {@apply px-[28.8px] py-3 rounded-xl font-inter font-medium text-base bg-linear-to-r from-secondary to-primary text-white shadow-gradientbtn}
+    .outline-btn {@apply border border-primary px-7 py-3.25 rounded-xl font-inter font-medium text-base text-primary leading-tight}
+    .gradient-btn {@apply px-7 py-3.25 leading-tight rounded-xl font-inter font-medium text-base bg-linear-to-r from-secondary to-primary text-white shadow-gradientbtn}
 }
 @layer utilities{
     .container {@apply max-w-[1472px] w-full px-4 mx-auto} 
