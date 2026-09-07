@@ -1,0 +1,155 @@
+/* Animated gradient border */
+  @property --border-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+  .gradient-border-wrap {
+    position: relative;
+    border-radius: 1.5rem;
+    padding: 2px;
+    background: conic-gradient(from var(--border-angle), #f2711f, #fdba74, #ffedd5, #f2711f, #c2410c, #f2711f);
+    animation: border-spin 6s linear infinite;
+  }
+  .gradient-border-wrap > .gradient-border-inner {
+    border-radius: calc(1.5rem - 2px);
+    background: #fff7ed;
+    height: 100%;
+    width: 100%;
+  }
+  @keyframes border-spin {
+    to { --border-angle: 360deg; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .gradient-border-wrap { animation: none; }
+  }
+ 
+  /* Animated gradient border for pill buttons */
+  .gradient-border-btn {
+    position: relative;
+    display: inline-block;
+    border-radius: 9999px;
+    padding: 2px;
+    background: conic-gradient(from var(--border-angle), #f2711f, #ffffff, #ffffff, #ffffff, #c2410c, #f2711f);
+    animation: border-spin 5s linear infinite;
+  }
+  .gradient-border-btn > a {
+    display: block;
+    border-radius: 9999px;
+    border: none !important;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .gradient-border-btn { animation: none; }
+  }
+
+   .orbit-scene {
+    position: relative;
+    width: min(400px, 85vw);
+    height: min(400px, 85vw);
+  }
+ 
+
+  .center-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90px;
+    height: 90px;
+    margin: -45px 0 0 -45px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #fbbf24, #f97316 60%, #ea580c 100%);
+    box-shadow: 0 0 40px 10px rgba(249, 115, 22, 0.55);
+    z-index: 10;
+  }
+ 
+  .orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px dashed rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: spin linear infinite;
+    z-index: 20;
+  }
+ 
+  .orbit-1 { width: 20%; height: 20%; animation-duration: 6s; }
+ 
+  .satellite {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+ 
+  .sat-1 {
+    width: 22px;
+    height: 22px;
+    background: radial-gradient(circle at 35% 35%, #93c5fd, #3b82f6 60%, #1d4ed8 100%);
+  }
+ 
+  .sat-2 {
+    width: 22px;
+    height: 22px;
+    background: radial-gradient(circle at 35% 35%, #fda4af, #f43f5e 60%, #be123c 100%);
+    box-shadow: 0 0 14px 3px rgba(244, 63, 94, 0.65);
+    left: 0%;
+  }
+
+ 
+  @keyframes spin {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to   { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+
+.orbit-viewport {
+  position: relative;
+}
+
+.orbit-content {
+  position: absolute;
+ 
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  transform: translateX(-50%);
+}
+
+.orbit-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f2711f; 
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.orbit-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 0.5px dashed rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.orbit-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 22px;
+  height: 22px;
+  margin: -11px;  
+  border-radius: 50%;
+  background: #c2410c; 
+  animation: orbit-spin 6s linear infinite;
+}
+
+@keyframes orbit-spin {
+  from { transform: rotate(0deg) translateX(90px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(90px) rotate(-360deg); }
+}

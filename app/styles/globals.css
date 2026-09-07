@@ -1,22 +1,28 @@
 @import "tailwindcss";
 
 @theme{
-    --font-sans: var(--font-zalando), system-ui, sans-serif;
+    --font-parkinsans: var(--font-parkinsans), system-ui, sans-serif;
+    --font-inter: var(--font-inter), system-ui, sans-serif;
     --font-iconly: 'Iconly';
-    --color-primary: rgba(255, 140, 57, 1);
-    --color-secondary: rgba(249, 6, 63, 1);
-    --color-paragraph: rgba(110, 113, 145, 1);
+    --color-primary: rgba(255, 107, 0, 1);
+    --color-secondary: rgba(161, 60, 11, 1);
     --color-heading: rgba(31, 31, 57, 1);
     --shadow-header: 0px 6px 32px 0px rgba(0, 0, 0, 0.04);
     --shadow-gradientbtn: 0px 8px 12px 0px rgba(246, 58, 33, 0.31);
     --shadow-btn: 0px 8px 40px 0px rgba(23, 31, 70, 0.08);
-    --shadow-dropdown: 0px 6px 32px 0px rgba(0, 0, 0, 0.04);
+    --shadow-card: 0px 10.53px 21.05px 0px rgba(0, 0, 0, 0.2);
     --breakpoint-xs: 500px;
     --breakpoint-custom: 1400px;
+    --animate-rotate: rotate 6s linear infinite;
+    @keyframes rotate {
+        100% {
+            transform: rotate(1turn); 
+        }
+    }
 }
 
 @layer base{
-     body {@apply bg-[#F3F5F7] text-heading}
+     body {@apply bg-[#F3F5F7] text-heading font-parkinsans}
      button {@apply cursor-pointer}
 
     .db-navbar {@apply hidden lg:flex items-center bg-white rounded-full shadow-header p-1}
@@ -25,8 +31,8 @@
 
 
     /* HEADER */
-    .db-header.fixed { @apply bg-white/40 shadow-header }
-    .db-header { @apply fixed top-0 left-0 z-30 w-full p-4 flex items-center justify-between lg:gap-36 bg-white/40 shadow-header transition-all duration-300 }
+    .db-header.fixed { @apply bg-white shadow-header }
+    .db-header { @apply  fixed top-0 left-0 z-30 w-full p-4 transition-all duration-300 }
 
 
     .drawer {@apply fixed top-0 z-999 left-0 inset-0 w-full bg-black/40 transition-all duration-500 opacity-0 invisible}
@@ -36,9 +42,19 @@
     .drawer-content.left {@apply left-0 right-auto -translate-x-full}
     .drawer.active .drawer-content.left {@apply translate-x-0}
 
+        /* TABS */
+    .db-tabBtn { @apply w-full flex items-center text-[15px] capitalize text-left gap-3 py-2 px-3 rounded border-b last:border-none transition border-slate-100 hover:bg-slate-100 }
+    .db-tabBtn i { @apply text-sm }
+    .db-tabBtn.active { @apply bg-[#fcd1b2] }
+    .db-tabDiv { @apply hidden }
+    .db-tabDiv.active { @apply block }
+
+    .gradient-text {@apply bg-linear-to-r from-primary to-secondary text-transparent bg-clip-text}
+    .outline-btn {@apply border border-primary px-[28.8px] py-3 rounded-xl font-inter font-medium text-base text-primary}
+    .gradient-btn {@apply px-[28.8px] py-3 rounded-xl font-inter font-medium text-base bg-linear-to-r from-secondary to-primary text-white shadow-gradientbtn}
 }
 @layer utilities{
-    .container {@apply max-w-380! w-full px-4 lg:px-6 mx-auto} 
+    .container {@apply max-w-[1472px] w-full px-4 mx-auto} 
 
 
 }
