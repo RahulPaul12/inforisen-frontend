@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme{
+    --font-sans: var(--font-zalando), system-ui, sans-serif;
+    --font-iconly: 'Iconly';
+    --color-primary: rgba(255, 140, 57, 1);
+    --color-secondary: rgba(249, 6, 63, 1);
+    --color-paragraph: rgba(110, 113, 145, 1);
+    --color-heading: rgba(31, 31, 57, 1);
+    --shadow-header: 0px 6px 32px 0px rgba(0, 0, 0, 0.04);
+    --shadow-gradientbtn: 0px 8px 12px 0px rgba(246, 58, 33, 0.31);
+    --shadow-btn: 0px 8px 40px 0px rgba(23, 31, 70, 0.08);
+    --shadow-dropdown: 0px 6px 32px 0px rgba(0, 0, 0, 0.04);
+    --breakpoint-xs: 500px;
+    --breakpoint-custom: 1400px;
+}
+
+@layer base{
+     body {@apply bg-[#F3F5F7] text-heading}
+     button {@apply cursor-pointer}
+
+    .db-navbar {@apply hidden lg:flex items-center bg-white rounded-full shadow-header p-1}
+    .db-navbar-menu {@apply px-3 h-10 flex items-center font-medium text-sm whitespace-nowrap}
+    .db-navbar-menu.active {@apply flex items-center font-medium text-sm bg-linear-to-r from-secondary to-primary rounded-full text-white shadow-gradientbtn}
+
+
+    /* HEADER */
+    .db-header.fixed { @apply bg-white/40 shadow-header }
+    .db-header { @apply fixed top-0 left-0 z-30 w-full p-4 flex items-center justify-between lg:gap-36 bg-white/40 shadow-header transition-all duration-300 }
+
+
+    .drawer {@apply fixed top-0 z-999 left-0 inset-0 w-full bg-black/40 transition-all duration-500 opacity-0 invisible}
+    .drawer.active {@apply opacity-100! visible!}
+    .drawer-content {@apply absolute right-0 translate-x-full overflow-y-scroll max-w-sm w-full h-full bg-white transition-all duration-500}
+    .drawer.active .drawer-content {@apply translate-x-0!}
+    .drawer-content.left {@apply left-0 right-auto -translate-x-full}
+    .drawer.active .drawer-content.left {@apply translate-x-0}
+
+}
+@layer utilities{
+    .container {@apply max-w-380! w-full px-4 lg:px-6 mx-auto} 
+
+
+}
+
