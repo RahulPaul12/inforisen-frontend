@@ -2,11 +2,13 @@
 import Image from "next/image";
 import { useState } from "react";
 import FaqSection from "@/components/FaqSection";
+import Titlebar from "@/components/ui/TitleBar";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("information");
   return (
     <main>
+      
       {/* <!--==========================
                    HERO PART START 
           ==========================--> */}
@@ -116,8 +118,7 @@ export default function Home() {
 
       {/* <!--==========================
               PAYMENT METHOD PART START
-          ==========================--> */}
-
+      ==========================--> */}
       <section className="py-16 md:py-20 lg:py-40">
         <div className="container">
           <div className="text-center mb-12 mx-auto max-w-218.75 w-full">
@@ -139,7 +140,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* <!--==========================
               PAYMENT METHOD PART END
         ==========================--> */}
@@ -147,7 +147,6 @@ export default function Home() {
       {/* <!--==========================
               GROWTH PART START
         ==========================--> */}
-
       <section className="py-16 md:py-20 lg:py-40">
         <div className="container">
           <div className="text-center mb-12 mx-auto max-w-218.75 w-full">
@@ -167,7 +166,96 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* <!--==========================
+              GROWTH PART END
+        ==========================--> */}
 
+        {/* <!--==========================
+              GROWTH PART START
+        ==========================--> */}
+      <section className="py-16 md:py-20">
+          <div className="container relative z-10">
+            <Titlebar title="GROWTH"/>
+            <div className="text-center mb-12 mx-auto max-w-218.75 w-full">
+              <h2 className="section-heading">
+                Growing on Social Media in {" "}
+                <span className="gradient-text">Bangladesh</span>
+              </h2>
+              <p className="section-desc">The smartest way to grow is by combining SMM support with real content. You use SMM at the beginning for momentum, then let organic growth take over.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
+               <div className="rounded-[20px] p-5 border-2 border-primary/20 bg-white">
+                  <div className="gradient-btn w-fit mx-auto">Weeks 1-2</div>
+                  <div className="flex flex-col gap-5">
+                  <div className="p-5 rounded-[20px] bg-[#F5F5F7E8] ">
+                      <div className="flex gap-2.5 items-start">
+                          <div className="w-10.5 h-10.5 bg-white rounded-xl flex items-center justify-center shrink-0 relative after:w-1 after:h-24 after:absolute after:top-16 after:border-primary after:border-dashed after:border-l-2">
+                            <span className="gradient-text font-semibold text-base">01</span>
+                          </div>
+                          <div className="flex flex-col justify-between gap-4">
+                              <h6 className="text-xl font-semibold text-primary">What You Do</h6>
+                              <p className="font-medium text-sm text-[#5A5A5A] leading-relaxed">Use SMM services to build initial followers and engagement</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div className="p-5 rounded-[20px] bg-[#F5F5F7E8]">
+                      <div className="flex gap-2.5 items-start">
+                          <div className="w-10.5 h-10.5 bg-white rounded-xl flex items-center justify-center shrink-0">
+                            <span className="gradient-text font-semibold text-base">01</span>
+                          </div>
+                          <div className="flex flex-col justify-between gap-4">
+                              <h6 className="text-xl font-semibold text-primary">What You Do</h6>
+                              <p className="font-medium text-sm text-[#5A5A5A] leading-relaxed">Use SMM services to build initial followers and engagement</p>
+                          </div>
+                      </div>
+                  </div>
+                  </div>
+               </div>
+               <div className="rounded-[20px] p-5 border-2 border-primary/20 bg-white">
+                  <div className="gradient-btn w-fit mx-auto">Weeks 1-2</div>
+                  <div className="p-5 rounded-[20px] bg-[#F5F5F7E8]">
+                      <div className="flex gap-2.5 items-start">
+                          <div className="w-10.5 h-10.5 bg-white rounded-xl flex items-center justify-center shrink-0">
+                            <span className="gradient-text font-semibold text-base">01</span>
+                          </div>
+                          <div className="flex flex-col justify-between gap-4">
+                              <h6 className="text-xl font-semibold text-primary">What You Do</h6>
+                              <p className="font-medium text-sm text-[#5A5A5A] leading-relaxed">Use SMM services to build initial followers and engagement</p>
+                          </div>
+                      </div>
+                  </div>
+               </div>
+               <div className="rounded-[20px] p-5 border-2 border-primary/20 bg-white">
+                  <div className="gradient-btn w-fit mx-auto">Weeks 1-2</div>
+                  <div className="p-5 rounded-[20px] bg-[#F5F5F7E8]">
+                      <div className="flex gap-2.5 items-start">
+                          <div className="w-10.5 h-10.5 bg-white rounded-xl flex items-center justify-center shrink-0">
+                            <span className="gradient-text font-semibold text-base">01</span>
+                          </div>
+                          <div className="flex flex-col justify-between gap-4">
+                              <h6 className="text-xl font-semibold text-primary">What You Do</h6>
+                              <p className="font-medium text-sm text-[#5A5A5A] leading-relaxed">Use SMM services to build initial followers and engagement</p>
+                          </div>
+                      </div>
+                  </div>
+               </div>
+               <div className="rounded-[20px] p-5 border-2 border-primary/20 bg-white">
+                  <div className="gradient-btn w-fit mx-auto">Weeks 1-2</div>
+                  <div className="p-5 rounded-[20px] bg-[#F5F5F7E8]">
+                      <div className="flex gap-2.5 items-start">
+                          <div className="w-10.5 h-10.5 bg-white rounded-xl flex items-center justify-center shrink-0">
+                            <span className="gradient-text font-semibold text-base">01</span>
+                          </div>
+                          <div className="flex flex-col justify-between gap-4">
+                              <h6 className="text-xl font-semibold text-primary">What You Do</h6>
+                              <p className="font-medium text-sm text-[#5A5A5A] leading-relaxed">Use SMM services to build initial followers and engagement</p>
+                          </div>
+                      </div>
+                  </div>
+               </div>
+            </div>
+          </div>
+      </section>
       {/* <!--==========================
               GROWTH PART END
         ==========================--> */}
@@ -175,27 +263,42 @@ export default function Home() {
       {/* <!--==========================
               ADVANTAGES PART START
         ==========================--> */}
-      <section className="py-16 md:py-20 lg:py-40">
-        <div className="container">
-          <div className="text-center mb-12 mx-auto max-w-218.75 w-full">
-            <h2 className="font-parkinsans font-semibold text-[32px] sm:text-[36px] mb-4.5">
-              Advantages of using {" "}
-              <span className="gradient-text">our panel services</span>
-            </h2>
-            <p className="font-inter text-lg font-normal">
-              Find clear and simple explanations to the most common questions about our services,payments, orders, and account management.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="p-13 rounded-[21px] shadow-card bg-white">
-              <h4 className="font-inter font-semibold text-base sm:text-lg">We Never Ask for Your Password</h4>
-              <p className="font-inter text-sm sm:text-base text-secondary">Your account security is our top priority. We never ask for your passwords, private keys, or any sensitive information. All interactions are done securely through authorized APIs.</p>
-
+      <section className="py-16 md:py-20 relative">
+          <Image className="absolute top-0 left-0 z-0" src="/images/advantage-shape.png" alt="footer-bg" width={5000} height={1000}/>
+          <Image className="absolute bottom-0 right-0 z-0" src="/images/advantage-shape-2.png" alt="footer-bg" width={1000} height={500}/>
+          <div className="container relative z-10">
+            <Titlebar title="ADVANTAGES"/>
+            <div className="text-center mb-12 mx-auto max-w-218.75 w-full">
+              <h2 className="section-heading">
+                Advantages of using {" "}
+                <span className="gradient-text">our panel services</span>
+              </h2>
+              <p className="section-desc"> Find clear and simple explanations to the most common questions about our services,payments, orders, and account management.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10.5">
+              <div className="card">
+                <Image className="mb-8" src="/images/lock.png" width={84} height={84} alt="" />
+                <h4 className="card-title">We Never Ask for Your Password</h4>
+                <p className="card-desc">You give us your username or profile link. That's it. We can't access your account. When you buy followers from us, we're accessing your public profile. The same profile millions of people can already see. Zero security risk.</p>
+              </div>
+              <div className="card">
+                <Image className="mb-8" src="/images/bot.png" width={84} height={84} alt="" />
+                <h4 className="card-title">We Use Real Users, Not Bots</h4>
+                <p className="card-desc">This is the difference between safe and unsafe SMM services. Unsafe services use bots, fake accounts, and empty profiles. Instagram, Facebook, and YouTube algorithms detect these instantly. That's when bans happen.</p>
+              </div>
+              <div className="card">
+                <Image className="mb-8" src="/images/growth.png" width={84} height={84} alt="" />
+                <h4 className="card-title">We Deliver Gradually</h4>
+                <p className="card-desc">Imagine gaining 5,000 followers overnight. That looks suspicious. Algorithms notice. They flag your account. We spread delivery over time. 5,000 followers arrive over 2-4 days, not 2 hours. This makes growth look natural. Social media algorithms see steady growth, not sudden spikes.</p>
+              </div>
+              <div className="card">
+                <Image className="mb-8" src="/images/trophy.png" width={84} height={84} alt="" />
+                <h4 className="card-title">Our Track Record</h4>
+                <p className="card-desc">321,879 completed orders. Not a single customer has reported an account ban caused by our services. That's not luck. We follow platform guidelines. We understand how Instagram, Facebook, YouTube, and TikTok detect fake activity. We stay within those boundaries.</p>
+              </div>
             </div>
           </div>
-        </div>
       </section>
-
       {/* <!--==========================
               ADVANTAGES PART END
         ==========================--> */}
@@ -211,7 +314,7 @@ export default function Home() {
       {/* <!--==========================
                   CTA PART START
         ==========================--> */}
-      <section className="mb-20">
+      <section className="sm:mt-20 mb-20 sm:pt-16">
         <div className="container">
           <div className="relative bg-[#fdf3e7] z-0">
             <div className="absolute inset-x-0 top-12 bottom-12 hidden md:flex items-center justify-center -z-10">
@@ -222,7 +325,7 @@ export default function Home() {
                 <div className="col-span-12 md:col-span-6 order-2 md:order-1">
                   <div className="ltr:lg:mr-20 rtl:lg:ml-20 max-w-118.75 w-full">
                     <h1 className="font-inter font-semibold text-[32px] mb-3">Ready to Grow Your Social Media <span className="gradient-text">in Bangladesh?</span></h1>
-                    <p className="mb-8 text-base font-medium font-inter"> Join over 68,000 users who are already using SMM  to grow faster on Facebook, Instagram, YouTube, TikTok, and more. Getting started is free and takes less than 60 seconds. </p>
+                    <p className="mb-8 text-base font-medium font-inter text-[#535353]"> Join over 68,000 users who are already using SMM  to grow faster on Facebook, Instagram, YouTube, TikTok, and more. Getting started is free and takes less than 60 seconds. </p>
                     <div className="flex flex-wrap gap-4">
                       <button className="outline-btn">See All Services</button>
                       <button className="gradient-btn">Create Free Account</button>
@@ -231,14 +334,15 @@ export default function Home() {
                 </div>
                 <div className="col-span-12 md:col-span-6 order-1 md:order-2">
                   <figure className="flex justify-center md:absolute md:bottom-0 md:right-0 md:justify-end max-w-full">
-                    <img
+                    <Image
                       alt="hero"
-                      className="w-full max-w-70 sm:max-w-sm md:max-w-115 h-auto"
+                      className="w-full max-w-70 sm:max-w-sm h-auto"
                       src="/images/cta.png"
+                      width={500}
+                      height={200}
                     />
                   </figure>
                 </div>
-
               </div>
             </div>
           </div>

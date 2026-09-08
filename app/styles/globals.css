@@ -8,23 +8,27 @@
     --color-secondary: rgba(161, 60, 11, 1);
     --color-heading: rgba(31, 31, 57, 1);
     --shadow-header: 0px 6px 32px 0px rgba(0, 0, 0, 0.04);
-    --shadow-gradientbtn: 0px 8px 12px 0px rgba(246, 58, 33, 0.31);
     --shadow-btn: 0px 8px 40px 0px rgba(23, 31, 70, 0.08);
     --shadow-card: 0px 10.53px 21.05px 0px rgba(0, 0, 0, 0.2);
     --breakpoint-xs: 500px;
     --breakpoint-custom: 1400px;
     --animate-rotate: rotate 6s linear infinite;
+    --animate-titlebar: dot-travel 2s linear infinite alternate;
 
     @keyframes rotate {
         100% {
             transform: rotate(1turn);
         }
     }
+    @keyframes dot-travel {
+        0% { left: 0%; }
+        100% { left: 100%; }
+    }
 }
 
 @layer base {
     body { @apply bg-[#F3F5F7] text-heading font-parkinsans}
-
+    button {@apply cursor-pointer}
     .header.fixed { @apply bg-white shadow-header font-inter}
     .header {@apply fixed top-0 left-0 z-30 w-full p-4 transition-all duration-300}
     .navbar {@apply flex items-center justify-between lg:gap-36 container mx-auto px-0! font-inter}
@@ -38,9 +42,14 @@
     .tabBtn.active { @apply bg-[#fcd1b2]}
     .tabDiv {@apply hidden}
     .tabDiv.active { @apply block}
+    .card {@apply p-8 sm:p-13 rounded-[21px] shadow-card bg-white}
+    .card-title {@apply font-inter font-bold text-base sm:text-lg mb-2.5}
+    .card-desc {@apply font-inter text-sm sm:text-base text-[#5A5A5A]}
+    .section-heading {@apply font-parkinsans font-semibold text-[32px] sm:text-[36px] mb-4.5}
+    .section-desc {@apply font-inter text-lg font-normal text-[#404A60]}
     .gradient-text {@apply bg-linear-to-r from-primary to-secondary text-transparent bg-clip-text}
     .outline-btn {@apply border border-primary px-7 py-3.25 rounded-xl font-inter font-medium text-base text-primary leading-tight}
-    .gradient-btn {@apply px-7 py-3.25 leading-tight rounded-xl font-inter font-medium text-base bg-linear-to-r from-secondary to-primary text-white shadow-gradientbtn}
+    .gradient-btn {@apply px-7 py-3.25 leading-tight rounded-xl font-inter font-medium text-base bg-linear-to-r from-secondary to-primary text-white}
     .footer { @apply pt-12 sm:pt-20 pb-5 bg-[#82330C] relative font-inter}
     .social-link {@apply w-10.5 h-10.5 rounded-md border border-white/10 bg-white/20 flex items-center justify-center}
     .footer-link {@apply text-base font-inter font-bold text-white}
