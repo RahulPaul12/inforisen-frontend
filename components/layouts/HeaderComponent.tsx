@@ -13,7 +13,7 @@ const HeaderComponent = () => {
     const { openCanvas } = useCanvas();
     return (
         <header className={` header ${sticky ? "fixed" : ""}`}>
-            <nav className="navbar">
+            <nav className="navbar container">
                 <Link href="/">
                     <Image src="/images/logo.png" className="h-12 lg:h-13.75 w-auto" alt="logo" width={100} height={20} />
                 </Link>
@@ -25,7 +25,7 @@ const HeaderComponent = () => {
                     <li><Link className="navbar-menu" href="/partner-program">Contact Us</Link></li>
                     <li><Link className="navbar-menu" href="/partner-program">Api</Link></li>
                 </ul>
-                <div className="hidden lg:flex items-center gap-2">
+                <div className="hidden lg:flex items-center gap-4">
                     <button className="outline-btn">
                         <span className="capitalize">Login</span>
                     </button>

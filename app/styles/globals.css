@@ -27,20 +27,22 @@
 }
 
 @layer base {
-    body { @apply bg-[#F3F5F7] text-heading font-parkinsans}
-    button {@apply cursor-pointer}
+     body { @apply bg-white text-heading font-parkinsans}
+     button {@apply cursor-pointer}
     .header.fixed { @apply bg-white shadow-header font-inter}
-    .header {@apply fixed top-0 left-0 z-30 w-full p-4 transition-all duration-300}
+    .header {@apply fixed top-0 left-0 z-30 w-full p-4 py-4 lg:py-6 transition-all duration-300}
     .navbar {@apply flex items-center justify-between lg:gap-36 container mx-auto px-0! font-inter}
     .navbar-menu {@apply py-2 px-3 rounded-lg text-base font-medium font-inter}
+    .hero-section {@apply pt-28 sm:pt-36 pb-14 bg-[#FFF8F2] bg-[url('/images/hero-bg.png')] bg-cover bg-center bg-no-repeat}
+    .hero-heading {@apply text-4xl leading-snug sm:text-[52px] font-bold font-parkinsans mb-6 }
+    .hero-desc {@apply w-full sm:max-w-sm md:max-w-lg text-base font-medium text-[#5A5A5A]}
     .drawer {@apply fixed top-0 z-999 left-0 inset-0 w-full bg-black/40 transition-all duration-500 opacity-0 invisible}
     .drawer.active {@apply opacity-100! visible!}
     .drawer-content {@apply absolute right-0 translate-x-full overflow-y-scroll max-w-sm w-full h-full bg-white transition-all duration-500}
     .drawer.active .drawer-content {@apply translate-x-0!}
-    .tabBtn {@apply w-full flex items-center text-[15px] capitalize text-left gap-3 py-2 px-3 rounded border-b last:border-none transition border-slate-100 hover:bg-slate-100}
-    .tabBtn i {@apply text-sm}
-    .tabBtn.active { @apply bg-[#fcd1b2]}
-    .tabDiv {@apply hidden}
+    .tabBtn {@apply w-full flex items-center text-[15px] capitalize text-left gap-3 py-2 px-3 rounded-xl border transition border-primary/10 bg-[#fff5ec] hover:bg-slate-100}
+    .tabBtn.active { @apply bg-linear-to-r from-secondary to-primary text-white}
+    .tabDiv {@apply hidden border border-primary/20 p-7 rounded-[20px] font-inter}
     .tabDiv.active { @apply block}
     .card {@apply p-8 sm:p-13 rounded-[21px] shadow-card bg-white}
     .card-title {@apply font-inter font-bold text-base sm:text-lg mb-2.5}

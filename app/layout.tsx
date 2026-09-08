@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Parkinsans, Inter } from "next/font/google";
+import { Parkinsans, Inter} from "next/font/google";
 import "@/app/styles/globals.css";
 import "@/app/styles/custom.css";
 import { config } from "@fortawesome/fontawesome-svg-core";

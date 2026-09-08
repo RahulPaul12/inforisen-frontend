@@ -43,38 +43,34 @@
     .gradient-border-btn { animation: none; }
   }
 
-   .orbit-scene {
-    position: relative;
-    width: min(400px, 85vw);
-    height: min(400px, 85vw);
-  }
  
 
   .center-circle {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 90px;
-    height: 90px;
-    margin: -45px 0 0 -45px;
+    width: 180px;
+    height: 180px;
+    margin: -90px 0 0 -90px;
     border-radius: 50%;
-    background: radial-gradient(circle at 35% 35%, #fbbf24, #f97316 60%, #ea580c 100%);
-    box-shadow: 0 0 40px 10px rgba(249, 115, 22, 0.55);
+    background: #fef2e4;
     z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
  
   .orbit {
     position: absolute;
     top: 50%;
     left: 50%;
-    border: 1px dashed rgba(255, 255, 255, 0.25);
     border-radius: 50%;
     transform: translate(-50%, -50%);
     animation: spin linear infinite;
     z-index: 20;
   }
  
-  .orbit-1 { width: 20%; height: 20%; animation-duration: 6s; }
+  .orbit-1 { width: 12%; height: 12%; animation-duration: 6s; }
  
   .satellite {
     position: absolute;
@@ -85,16 +81,15 @@
   }
  
   .sat-1 {
-    width: 22px;
-    height: 22px;
-    background: radial-gradient(circle at 35% 35%, #93c5fd, #3b82f6 60%, #1d4ed8 100%);
+    width: 10px;
+    height: 10px;
+    background: rgba(161, 60, 11, 1);
   }
  
   .sat-2 {
-    width: 22px;
-    height: 22px;
-    background: radial-gradient(circle at 35% 35%, #fda4af, #f43f5e 60%, #be123c 100%);
-    box-shadow: 0 0 14px 3px rgba(244, 63, 94, 0.65);
+    width: 10px;
+    height: 10px;
+    background: rgba(161, 60, 11, 1);
     left: 0%;
   }
 
@@ -104,17 +99,14 @@
     to   { transform: translate(-50%, -50%) rotate(360deg); }
   }
 
-.orbit-viewport {
-  position: relative;
-}
 
 .orbit-content {
   position: absolute;
- 
+  top:50%;
   left: 50%;
   width: 300px;
   height: 300px;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
 }
 
 .orbit-center {
@@ -148,6 +140,16 @@
   border-radius: 50%;
   background: #c2410c; 
   animation: orbit-spin 6s linear infinite;
+}
+
+.polygon {
+  width: 38px;
+  background-color: white;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: polygon(75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%,0% 50%,25% 6.7%);
 }
 
 @keyframes orbit-spin {

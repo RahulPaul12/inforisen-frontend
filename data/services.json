@@ -1,0 +1,74 @@
+[
+    {
+        "id":1,
+        "services":"Facebook",
+        "icon":"facebook-tab.png",
+        "content": "Facebook Marketing Services"
+    },
+    {
+        "id":2,
+        "services":"Instagram",
+        "icon":"instagram-tab.png",
+        "content": "Instagram Marketing Services"
+    },
+    {
+        "id":3,
+        "services":"Twitter",
+        "icon":"twitter-tab.png",
+        "content": "Twitter Marketing Services"
+    },
+    {
+        "id":4,
+        "services":"Youtube",
+        "icon":"youtube-tab.png",
+        "content": "Youtube Marketing Services"
+    },
+    {
+        "id":5,
+        "services":"TikTok",
+        "icon":"tiktok-tab.png",
+        "content": "TikTok Marketing Services"
+    },
+    {
+        "id":6,
+        "services":"Linkedin",
+        "icon":"linkedin-tab.png",
+        "content": "Linkedin Marketing Services"
+    },
+    {
+        "id":7,
+        "services":"Telegram",
+        "icon":"telegram-tab.png",
+        "content": "Telegram Marketing Services"
+    },
+    {
+        "id":8,
+        "services":"Discord",
+        "icon":"discord-tab.png",
+        "content": "Discord Marketing Services"
+    },
+    {
+        "id":9,
+        "services":"Spotify",
+        "icon":"spotify-tab.png",
+        "content": "Spotify Marketing Services"
+    },
+    {
+        "id":10,
+        "services":"SoundCloud",
+        "icon":"soundcloud-tab.png",
+        "content": "SoundCloud Marketing Services"
+    },
+    {
+        "id":11,
+        "services":"SnapChat",
+        "icon":"snapchat-tab.png",
+        "content": "SnapChat Marketing Services"
+    },
+    {
+        "id":12,
+        "services":"Wbsite Traffic",
+        "icon":"growth-tab.png",
+        "content": "Wbsite Traffic Marketing Services"
+    }
+]
