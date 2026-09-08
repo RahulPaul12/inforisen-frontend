@@ -1,5 +1,7 @@
 'use client'
 import useCanvas from "@/hooks/useCanvas";
+import { faClose } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
 const SidebarComponent = () => {
@@ -8,27 +10,30 @@ const SidebarComponent = () => {
        <aside onClick={closeBackdrop} className="drawer" id="menu-sidebar">
             <div className="drawer-content">
                 <div className="py-4 flex items-center justify-between px-4 border-b border-slate-100">
-                    <Link href={"/"} className="active router-link-exact-active router-link-active router-link-exact-active flex-shrink-0" aria-current="page">
-                        <img className="w-28 sm:w-32" alt="logo" src="/images/logo.png"/>
+                    <Link href={"/"} className="shrink-0" aria-current="page">
+                        <img className="h-10 w-auto" alt="logo" src="/images/logo.png"/>
                     </Link>
-                    <button onClick={()=>closeCanvas('menu')} type="button">
-                        <i className="icon-close-circle text-xl text-red-500"></i>
+                    <button onClick={()=>closeCanvas('menu-sidebar')} type="button">
+                        <FontAwesomeIcon icon={faClose}/>
                     </button>
                 </div>
-                <div className="px-4 pb-10">
-                    <nav className="flex flex-col">
-                        <Link href={"/home"} className="text-base font-medium capitalize py-3 border-b border-slate-100 text-heading">Home</Link>
-                        <Link href={"/offers"} className="text-base font-medium capitalize py-3 border-b border-slate-100 text-heading">Offers</Link>
-                        <Link href={""} className="text-base font-medium capitalize py-3 border-b border-slate-100 text-heading">FAQ</Link>
-                        <Link href={""} className="text-base font-medium capitalize py-3 border-b border-slate-100 text-heading">Return &amp; Exchange</Link>
-                        <Link href={""} className="text-base font-medium capitalize py-3 border-b border-slate-100 text-heading">Shipping</Link>
-                        <Link href={""} className="text-base font-medium capitalize py-3 border-b border-slate-100 text-heading">Size Charts</Link>
-                        <Link href={""} className="text-base font-medium capitalize py-3 border-b border-slate-100 text-heading">Cookies Policy</Link>
-                        <Link href={""} className="text-base font-medium capitalize py-3 border-b border-slate-100 text-heading">Terms &amp; Conditions</Link>
-                        <Link href={""} className="text-base font-medium capitalize py-3 border-b border-slate-100 text-heading">Privacy Policy</Link>
-                        <Link href={""} className="text-base font-medium capitalize py-3 border-b border-slate-100 text-heading">About Us</Link>
-                        <Link href={""} className="text-base font-medium capitalize py-3 border-b border-slate-100 text-heading">Contact Us</Link>
+                <div className="px-4 pb-10 h-full">
+                    <nav className="flex flex-col max-h-[calc(100dvh-200px)] h-full overflow-scroll">
+                        <Link href={"/"} className="navbar-menu">Home</Link>
+                        <Link href={""} className="navbar-menu">Services</Link>
+                        <Link href={""} className="navbar-menu">Blog</Link>
+                        <Link href={""} className="navbar-menu">About Us</Link>
+                        <Link href={""} className="navbar-menu">Contact Us</Link>
+                        <Link href={""} className="navbar-menu">Api</Link>
                     </nav>
+                    <div className="lg:hidden flex flex-col items-center gap-2">
+                        <button className="outline-btn w-full">
+                            <span className="capitalize">Login</span>
+                        </button>
+                        <button className="gradient-btn w-full">
+                            <span className="capitalize">Signup</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </aside>

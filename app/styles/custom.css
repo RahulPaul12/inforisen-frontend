@@ -24,6 +24,7 @@
     .gradient-border-wrap { animation: none; }
   }
  
+  
   /* Animated gradient border for pill buttons */
   .gradient-border-btn {
     position: relative;

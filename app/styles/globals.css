@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@theme{
+@theme {
     --font-parkinsans: var(--font-parkinsans), system-ui, sans-serif;
     --font-inter: var(--font-inter), system-ui, sans-serif;
     --font-iconly: 'Iconly';
@@ -14,48 +14,38 @@
     --breakpoint-xs: 500px;
     --breakpoint-custom: 1400px;
     --animate-rotate: rotate 6s linear infinite;
+
     @keyframes rotate {
         100% {
-            transform: rotate(1turn); 
+            transform: rotate(1turn);
         }
     }
 }
 
-@layer base{
-     body {@apply bg-[#F3F5F7] text-heading font-parkinsans}
-     button {@apply cursor-pointer}
+@layer base {
+    body { @apply bg-[#F3F5F7] text-heading font-parkinsans}
 
-    .db-navbar {@apply hidden lg:flex items-center bg-white rounded-full shadow-header p-1}
-    .db-navbar-menu {@apply px-3 h-10 flex items-center font-medium text-sm whitespace-nowrap}
-    .db-navbar-menu.active {@apply flex items-center font-medium text-sm bg-linear-to-r from-secondary to-primary rounded-full text-white shadow-gradientbtn}
-
-
-    /* HEADER */
-    .db-header.fixed { @apply bg-white shadow-header }
-    .db-header { @apply  fixed top-0 left-0 z-30 w-full p-4 transition-all duration-300 }
-
-
+    .header.fixed { @apply bg-white shadow-header font-inter}
+    .header {@apply fixed top-0 left-0 z-30 w-full p-4 transition-all duration-300}
+    .navbar {@apply flex items-center justify-between lg:gap-36 container mx-auto px-0! font-inter}
+    .navbar-menu {@apply py-2 px-3 rounded-lg text-base font-medium font-inter}
     .drawer {@apply fixed top-0 z-999 left-0 inset-0 w-full bg-black/40 transition-all duration-500 opacity-0 invisible}
     .drawer.active {@apply opacity-100! visible!}
     .drawer-content {@apply absolute right-0 translate-x-full overflow-y-scroll max-w-sm w-full h-full bg-white transition-all duration-500}
     .drawer.active .drawer-content {@apply translate-x-0!}
-    .drawer-content.left {@apply left-0 right-auto -translate-x-full}
-    .drawer.active .drawer-content.left {@apply translate-x-0}
-
-        /* TABS */
-    .db-tabBtn { @apply w-full flex items-center text-[15px] capitalize text-left gap-3 py-2 px-3 rounded border-b last:border-none transition border-slate-100 hover:bg-slate-100 }
-    .db-tabBtn i { @apply text-sm }
-    .db-tabBtn.active { @apply bg-[#fcd1b2] }
-    .db-tabDiv { @apply hidden }
-    .db-tabDiv.active { @apply block }
-
+    .tabBtn {@apply w-full flex items-center text-[15px] capitalize text-left gap-3 py-2 px-3 rounded border-b last:border-none transition border-slate-100 hover:bg-slate-100}
+    .tabBtn i {@apply text-sm}
+    .tabBtn.active { @apply bg-[#fcd1b2]}
+    .tabDiv {@apply hidden}
+    .tabDiv.active { @apply block}
     .gradient-text {@apply bg-linear-to-r from-primary to-secondary text-transparent bg-clip-text}
     .outline-btn {@apply border border-primary px-7 py-3.25 rounded-xl font-inter font-medium text-base text-primary leading-tight}
     .gradient-btn {@apply px-7 py-3.25 leading-tight rounded-xl font-inter font-medium text-base bg-linear-to-r from-secondary to-primary text-white shadow-gradientbtn}
-}
-@layer utilities{
-    .container {@apply max-w-[1472px] w-full px-4 mx-auto} 
-
-
+    .footer { @apply pt-12 sm:pt-20 pb-5 bg-[#82330C] relative font-inter}
+    .social-link {@apply w-10.5 h-10.5 rounded-md border border-white/10 bg-white/20 flex items-center justify-center}
+    .footer-link {@apply text-base font-inter font-bold text-white}
 }
 
+@layer utilities {
+    .container {@apply max-w-[1472px] w-full px-4 mx-auto}
+}
